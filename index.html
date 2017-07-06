@@ -8,6 +8,24 @@
     <link rel="stylesheet" href="assets\css\style.css">
 </head>
 <body>
+    <script type="text/paperscript" canvas="myCanvas">
+
+    function onKeyDown(event) {
+    	var maxPoint = new Point(view.size.width, view.size.height);
+        var randomPoint = Point.random();
+        var point = maxPoint * randomPoint;
+
+        new Path.Circle(point, 10).fillColor = 'orange';
+    }
+
+
+    </script>
+
+
+    <canvas id="myCanvas" resize></canvas>
+
+
+    <script src="assets\js\lib\paper-full.js"></script>
     <script src="assets\js\script.js"></script>
 </body>
 </html>
